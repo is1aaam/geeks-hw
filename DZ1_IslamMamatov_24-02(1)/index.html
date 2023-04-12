@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required pattern="^\S+@\S+\.\S+$">
+  <span id="email-error"></span>
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$">
+  <span id="password-error"></span>
+  <br>
+  <label for="confirm-password">Confirm Password:</label>
+  <input type="password" id="confirm-password" name="confirm-password" required>
+  <span id="confirm-password-error"></span>
+  <br>
+  <input type="checkbox" id="show-password" onclick="togglePasswordVisibility()"> Show Password
+  <br><br>
+  <input type="submit" value="Submit" onclick="validateForm(event)">
+</body>
+<style>
+    body {
+        font-size: 30px;
+        
+        
+    }
+    span{
+        font-size: 15px;
+        color: red;
+    }
+    label {
+        color: orange;
+    }
+</style>
+    <script src="app.js"></script>
+</html>
